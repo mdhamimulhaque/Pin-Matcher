@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Matcher</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="pin-generator half-width">
+                    <input id="generator-display-box" class="form-control text-center" type="text">
+                    <button id="pin-generator-button" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="input-section half-width">
+                    <input id="pinMatchBox" class="form-control text-center" type="text" placeholder="Enter 4 digit Code">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '7'">7</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '8'">8</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '9'">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '4'">4</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '5'">5</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '6'">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '1'">1</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '2'">2</div>
+                              <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '3'">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button" onclick="pinMatchBox.value =pinMatchBox.value.slice(0,-1)"><</div>
+                                <div class="button" onclick="pinMatchBox.value = pinMatchBox.value + '0'">0</div>
+                                <div class="button" onclick="pinMatchBox.value =''">C</div>
+                            </div>
+                            <div>
+                                <button id="pin-match-button" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section mt-2">
+            <p class="notify-wrong text-white">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify-success text-white">✅ Pin Matched... Secret door is opening for you</p>
+            <p class="notify-warning text-white">⚠️ plzzz Pick the generator code & apply again</p>
+        </div>
+    </div>
+    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
