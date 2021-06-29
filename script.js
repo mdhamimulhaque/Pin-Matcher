@@ -24,11 +24,26 @@ pinMatchButton.addEventListener("click",function(){
    
 const generateValue = document.querySelector("#generator-display-box").value;
 const pinTypeMatchBox = document.querySelector("#pinMatchBox").value;
+document.querySelector("#pinMatchBox").value = "";
+
 
     if (generateValue === pinTypeMatchBox && pinTypeMatchBox != "") {
         notifySuccess.style.display = "block";
-    } else{
+    }
+     else{
         notifyWrong.style.display = "block";
+        
+        let num = 2;
+        if(num < 1){
+            document.querySelector("#try-count").innerHTML = "No try left";
+        }else{
+            document.querySelector("#try-count").innerHTML = num-- + " try left";
+         
+        }
+
+        
+
+
     }
 })
 
